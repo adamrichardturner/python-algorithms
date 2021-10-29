@@ -36,5 +36,3 @@ def iq_test(numbers):
             if i % 2 == 0:
                 # Because we are counting from 1 and not 0 indexed, we add 1 to the index
                 return intList.index(i) + 1
-
-print(iq_test("43 28 1 91"))
