@@ -16,7 +16,7 @@ def rot13(message):
     # We will append each char to this list and return it is a string.
     rot13 = []
     for char in message:
-        # If the char is upper, find it's matching index in the upper or lower alpha string
+        # If the char is upper or lower, find it's matching index in the upper or lower alpha string
         if char.isupper():
             index = alphaUpper.index(char)
             # Append the -13 index of the location of the char in the correct string.
@@ -30,6 +30,6 @@ def rot13(message):
             rot13.append(char)
     return ''.join(rot13)
 
-print(rot13("Hello World!"))
-print(rot13("Adam Turner is King!"))
-print(rot13("Attack at Dawn!"))
+print(rot13("Hello World!")) # Uryyb Jbeyq!
+print(rot13("Adam Turner is King!")) # Nqnz Gheare vf Xvat!
+print(rot13("Attack at Dawn!")) # Nggnpx ng Qnja!
