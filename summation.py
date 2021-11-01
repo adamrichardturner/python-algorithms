@@ -19,4 +19,4 @@ def summation(num):
         sum += num
     return sum
 
-print(summation(8))
+print(summation(8)) # 36
