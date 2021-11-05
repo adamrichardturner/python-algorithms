@@ -13,4 +13,4 @@ def disemvowel(string_):
     # Join the char list as a string and return it.
     return ''.join(noVowel)
 
-print(disemvowel("This website is for losers LOL!"))
+print(disemvowel("This website is for losers LOL!")) # Outputs Ths wbst s fr lsrs LL!

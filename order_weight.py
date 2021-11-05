@@ -16,17 +16,18 @@ def order_weight(strng):
 
     "100 180 90 56 65 74 68 86 99"
     """
+
     nums = []
     sum = 0
+    strings = []
     for i in strng:
         if i.isdigit():
             sum += int(i)
+            nums = sorted(nums)
         elif i == ' ':
             nums.append(sum)
             sum = 0
-    numsOrder = nums.sort()
-
     print(nums)
-    print(numsOrder)
+    print(strings)
 
 order_weight("56 65 74 100 99 68 86 180 90")
