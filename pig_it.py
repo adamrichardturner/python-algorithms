@@ -22,4 +22,4 @@ def pig_it(text):
     # Return the joined list as a string.
     return ' '.join(pigLatin)
 
-print(pig_it("Pig Latin is cool!"))
+print(pig_it("Adam knows more than the chef, muahhaha")) # igPay atinLay siay oolcay
