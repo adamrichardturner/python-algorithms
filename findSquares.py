@@ -11,11 +11,15 @@ def findSquares(x,y):
     of squares for any given rectangle, the dimensions of which being given as 
     two integers with the first always being equal to or greater than the second.
     """
+    # Algorithm works as follows: Total number of squares= x*y + (x−1)*(y−1)+(x−2)*(y−2)+…
     totalSquares = x * y
+    # Iterate through each number stopping inclusive of the first side length.
     for i in range(1, x + 1):
+        # If = to the smaller side length, break the loop.
         if i == y:
             break
         else:
+        # Else, totalSquares is x - i * y - i
             totalSquares += (x - i) * (y - i)
     return totalSquares
 
