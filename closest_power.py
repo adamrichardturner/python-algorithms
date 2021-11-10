@@ -1,3 +1,5 @@
+import math
+
 def closest_power(n):
     """
     Perfect powers are numbers that can be written m^k, where m and k are both integers greater than 1.
@@ -19,12 +21,14 @@ def closest_power(n):
     if n <= 0 or n == 1:
         return 4
     # In any other case, for m in the range (start 2, end m inclusive) iterate each number up to and including m.
-    for m in range(2, n + 1):
-        # Within each iteration above, complete iteration of the same range..
-        for k in range(2, n + 1):
-            # Append to perfect m^k. This will check all combinations of powers upto and inclusive of the range m.
+    for m in range(2, math.ceil(n), 1):
+    # Within each iteration above, complete iteration of the same range..
+        for k in range(2, math.ceil(n), 1):
+        # Append to perfect m^k. This will check all combinations of powers upto and inclusive of the range m.
             perfect.append(m ** k)
     # Return the minimum possible perfect power from the list. I.E the perfect power closest to our input (n).
-    return min(perfect, key=lambda x:abs(x-n))
+    print(perfect)
+    return min(perfect, key=lambda x:abs(x-round(n)))
+    
 
-print(closest_power(34))
+print(closest_power(56.5))
