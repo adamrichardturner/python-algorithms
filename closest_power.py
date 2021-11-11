@@ -16,19 +16,28 @@ def closest_power(n):
     34  -->  32    # 32 = 2^5 and 36 = 6^2 --> same distance, pick the smaller
     """
     # Store our list of powers here...
-    perfect = []
+    powers = []
+    # Round n and cast it as an int...
+    z = int(round(n))
     # If n <= 0 or == 1 return 4...
-    if n <= 0 or n == 1:
+    if z <= 0 or z == 1:
         return 4
-    # In any other case, for m in the range (start 2, end m inclusive) iterate each number up to and including m.
-    for m in range(2, math.ceil(n), 1):
+     # In any other case, for m in the range (start 2, end z inclusive) iterate each number up to and including z.
+    for m in range(2, z + 1, 1):
     # Within each iteration above, complete iteration of the same range..
-        for k in range(2, math.ceil(n), 1):
-        # Append to perfect m^k. This will check all combinations of powers upto and inclusive of the range m.
-            perfect.append(m ** k)
-    # Return the minimum possible perfect power from the list. I.E the perfect power closest to our input (n).
-    print(perfect)
-    return min(perfect, key=lambda x:abs(x-round(n)))
-    
+        for k in range(2, z + 1, 1):
+            # If z is not in powers...
+            if z not in powers:
+                # Append m^k tp powers
+                powers.append(m ** k)
+                if len(powers) >= 100:
+                    break
+    # Return the minimum value in powers closest to our input number
+    return min(powers, key=lambda x:abs(x-z))
 
-print(closest_power(56.5))
+print(closest_power(0)) # 4
+print(closest_power(11)) # 9
+print(closest_power(30)) # 32
+print(closest_power(34)) # 32
+print(closest_power(56.5)) # 49
+#print(closest_power(123321456654)) # CRASH!
