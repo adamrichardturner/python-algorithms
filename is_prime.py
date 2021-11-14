@@ -31,8 +31,8 @@ def is_prime(num):
         # Otherwise, we don't...
             return False
 
-print(is_prime(1))
-print(is_prime(2))
-print(is_prime(3))
-print(is_prime(7))
-print(is_prime(5099))
+print(is_prime(1)) # False
+print(is_prime(2)) # True
+print(is_prime(3)) # True
+print(is_prime(7)) # True
+print(is_prime(5099)) # True

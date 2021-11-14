@@ -1,5 +1,3 @@
-import math
-
 def closest_power(n):
     """
     Perfect powers are numbers that can be written m^k, where m and k are both integers greater than 1.
@@ -28,10 +26,12 @@ def closest_power(n):
         for k in range(2, z + 1, 1):
             # If z is not in powers...
             if z not in powers:
-                # Append m^k tp powers
-                powers.append(m ** k)
-                if len(powers) >= 100:
+                if len(powers) > 100:
                     break
+                else:
+                    print(m ** k)
+                    powers.append(m ** k)
+
     # Return the minimum value in powers closest to our input number
     return min(powers, key=lambda x:abs(x-z))
 
@@ -40,4 +40,4 @@ print(closest_power(11)) # 9
 print(closest_power(30)) # 32
 print(closest_power(34)) # 32
 print(closest_power(56.5)) # 49
-#print(closest_power(123321456654)) # CRASH!
+print(closest_power(123321456654)) # CRASH!
