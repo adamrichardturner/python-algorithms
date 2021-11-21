@@ -17,12 +17,12 @@ def count_nines(n):
 
     return nineSum
 
-print(count_nines(1))
-print(count_nines(9))
-print(count_nines(100))
-print(count_nines(200))
-print(count_nines(278))
-print(count_nines(279))
-print(count_nines(280))
-print(count_nines(908))
-print(count_nines(909))
+print(count_nines(1)) # 0
+print(count_nines(9)) # 1
+print(count_nines(100)) # 20
+print(count_nines(200)) # 40
+print(count_nines(278)) # 47
+print(count_nines(279)) # 48
+print(count_nines(280)) # 48
+print(count_nines(908)) # 189
+print(count_nines(909)) # 191
