@@ -14,13 +14,18 @@ def procedure(i):
 
     Sum of each new digit sum --> 25
     """
+    # We store our sum here...
     sum = 0
+    # For each multiple...
     for n in range(i, 101, i):
+        # And each digit in that multiple
         for x in str(n):
+            # Add the digit to the sum
             sum += int(x)
+    # Return the sum
     return sum
 
 
-print(procedure(25))
-print(procedure(30))
-print(procedure(12))
+print(procedure(25)) # 25
+print(procedure(30)) # 18
+print(procedure(12)) # 72
