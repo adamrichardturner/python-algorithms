@@ -12,7 +12,7 @@ def solve(n):
     primes = []
     for num in range(n - 100, n + 101):
         if num > 1:
-            for i in range(2, int(math.sqrt(num))):
+            for i in range(2, int(math.sqrt(num)) + 1):
                 if num % i == 0:
                     break
             else:
