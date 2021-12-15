@@ -13,7 +13,7 @@ def solve(a,b):
         for i in range(2, num + 1):
             if num % i == 0:
                 count = 1
-                for j in range(2, (i//2 + 1)):
+                for j in range(2, (i // 2 + 1)):
                     if(i % j == 0):
                         count = 0
                         break
@@ -34,7 +34,7 @@ def solve(a,b):
     
     return divide_primes()
 
-print(solve(15, 12))
+print(solve(15, 12)) # False
 print(solve(2,256))
 print(solve(2,253))
 print(solve(9,243))
