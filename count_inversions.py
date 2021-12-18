@@ -11,15 +11,10 @@ def count_inversions(array):
     [4, 3, 2, 1]  =>  6 inversions: 4 and 3, 4 and 2, 4 and 1, 3 and 2, 3 and 1, 2 and 1
     """
     inversions = 0
-    sortedList = []
-    while array:
-        min = array[0]
-        for num in array:
-            if num < min:
+    for i in range(len(array)):
+        for j in range(i + 1, len(array)):
+            if array[i] > array[j]:
                 inversions += 1
-                min = num
-        sortedList.append(min)
-        array.remove(min)
     return inversions
     
 
