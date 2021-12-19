@@ -18,4 +18,4 @@ def count_inversions(array):
     return inversions
     
 
-print(count_inversions([6,5,4,3,3,3,3,2,1])) # Returns 24, should return 30
+print(count_inversions([6,5,4,3,3,3,3,2,1])) # Returns 30
