@@ -18,6 +18,6 @@ def add(num1, num2):
     # Here we return the integer representation of sums concatenated together...
     return int(''.join([str(x) for x in to_sum]))
 
-print(add(16, 18))
-print(add(26, 39))
-print(add(122, 81))
+print(add(16, 18)) # 214
+print(add(26, 39)) # 515
+print(add(122, 81)) # 1103
