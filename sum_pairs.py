@@ -21,18 +21,28 @@ def sum_pairs(ints, s):
         return res
     pairs = get_pairs(ints, s)
     if len(pairs) == 1:
-        return pairs
+        return pairs[0]
     else:
         nums = ints.copy()
         indices = []
         while pairs:
             i = pairs.pop()
-            x = 0
             for n in i:
                 if n in nums:
                     indices.append(nums.index(n))
-                    nums[nums.index(n)] = 0
-            
-        print("Indices", indices)
-print(sum_pairs([10, 5, 2, 3, 7, 5],         10))
-print(sum_pairs([11, 3, 7, 5],         10))
+                    nums[nums.index(n)] = 'x'
+        def chunks(lst, n):
+            for i in range(0, len(lst), n):
+                yield lst[i:i + n]
+        index_pairs = list(chunks(indices, 2))
+        absolutes = []
+        print("index pairs: ", index_pairs)
+        if not index_pairs:
+            return None
+        for pair in index_pairs:
+            absolutes.append(pair[1] - pair[0])
+        a = index_pairs[absolutes.index(min(absolutes))][0]
+        b = index_pairs[absolutes.index(min(absolutes))][1]
+        return [ints[a], ints[b]]
+
+print(sum_pairs([1, 2, 3, 4, 1, 0], 2))
