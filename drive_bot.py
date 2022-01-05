@@ -27,6 +27,7 @@ robot_3 = DriveBot(20, 60, 10)
 robot_1.latitude, robot_1.longitude, robot_1.all_disabled = -50.0, 50.0, True
 robot_2.latitude, robot_2.longitude, robot_2.all_disabled = -50.0, 50.0, True
 robot_3.latitude, robot_3.longitude, robot_3.all_disabled = -50.0, 50.0, True
+
 print(robot_1.latitude)
 print(robot_2.longitude)
 print(robot_3.all_disabled)

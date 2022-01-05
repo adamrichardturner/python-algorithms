@@ -45,4 +45,4 @@ def sum_pairs(ints, s):
         b = index_pairs[absolutes.index(min(absolutes))][1]
         return [ints[a], ints[b]]
 
-print(sum_pairs([1, 2, 3, 4, 1, 0], 2))
+print(sum_pairs([1, 2, 3, 4, 1, 0], 2)) # [1, 1]
