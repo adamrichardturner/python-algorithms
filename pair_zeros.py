@@ -3,6 +3,9 @@ def pair_zeros(arr):
     For a given list of digits 0 to 9, return a list with the same digits 
     in the same order, but with all 0s paired. Pairing two 0s generates one
     0 at the location of the first one.
+
+    E.G
+
     input: [0, 1, 7, 0, 2, 2, 0, 0, 1, 0]
     paired: ^--------^        ^--^
         -> [0, 1, 7,    2, 2, 0,    1, 0]
