@@ -17,4 +17,4 @@ def solve(arr):
             res.append(n)
     return res[::-1]
 
-print(solve([3,4,4,3,6,3]))
+print(solve([3,4,4,3,6,3])) # [4, 6, 3]
